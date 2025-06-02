@@ -12,8 +12,12 @@ from ..shells import shell  # noqa: E402
 from .alias import print_alias  # noqa: E402
 from .fix_command import fix_command  # noqa: E402
 
+# dev
+from ..utils import log
 
 def main():
+    log('whats up dev!')
+
     parser = Parser()
     known_args = parser.parse(sys.argv)
 
@@ -26,8 +30,13 @@ def main():
     # `TF_HISTORY` is in `os.environ`, otherwise it might mess with subshells.
     # Check https://github.com/nvbn/thefuck/issues/921 for reference
     elif known_args.alias:
+        log(f"Alias: {known_args.alias}")
         print_alias(known_args)
+
     elif known_args.command or 'TF_HISTORY' in os.environ:
+        latest_history = os.environ['TF_HISTORY'].split('\n')[::-1]
+        log(f"Command:TF_HISTORY: {known_args.command}:{latest_history}")
+
         fix_command(known_args)
     elif known_args.shell_logger:
         try:

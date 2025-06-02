@@ -12,6 +12,10 @@ from .logs import warn, exception
 from .conf import settings
 from .system import Path
 
+# dev
+import inspect
+from colorama import Fore, Style
+
 DEVNULL = open(os.devnull, 'w')
 
 if six.PY2:
@@ -345,3 +349,12 @@ def format_raw_script(raw_script):
         script = ' '.join(raw_script)
 
     return script.lstrip()
+
+def log(msg):
+    frame = inspect.currentframe().f_back
+    filename = os.path.basename(frame.f_code.co_filename)
+    funcname = frame.f_code.co_name
+    with open('/tmp/thefuck_debug.log', 'a') as f:
+        f.write(Fore.RED + f"[{filename}:{funcname}]")
+        f.write(Style.RESET_ALL)
+        f.write(f" {msg}\n")

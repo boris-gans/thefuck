@@ -3,6 +3,9 @@ from argparse import ArgumentParser, SUPPRESS
 from .const import ARGUMENT_PLACEHOLDER
 from .utils import get_alias
 
+# dev
+from .utils import log
+
 
 class Parser(object):
     """Argument parser that can handle arguments with our special
@@ -83,6 +86,13 @@ class Parser(object):
 
     def parse(self, argv):
         arguments = self._prepare_arguments(argv[1:])
+        log(f"Args after prep: {arguments}")
+
+        new_arguments = self._parser.parse_args(arguments)
+        log(f"Args after parse_args: {new_arguments}")
+        # print(f"Args after parse_args: {new_arguments}")
+        # return new_arguments
+    
         return self._parser.parse_args(arguments)
 
     def print_usage(self):
