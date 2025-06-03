@@ -1,4 +1,8 @@
 # Installation Guide
+i need to differentiate between normal installs and dev installs. Unfortunatley I think the only way to get it working on CMD is by doing some annoying path work, so maybe i can create an extension of the .bat script to automate this.
+-   Also, have this fork also fix the import error with imp, should be quite simple
+
+
 
 ## Windows
 
