@@ -29,9 +29,22 @@ Move the `fuck.bat` file (located at `thefuck/scipts/fuck.bat`) to this new cust
 
 Add the custom folder to your System Path:
 
-    (GUI): Environment Variables --> Edit the system environment variables --> Environment Variables --> User variables --> Select Path --> Click Edit --> Click New, and add the file path of bat file in the custom directory (`C:\Tools\fuck.bat`) --> Hit OK on all windows
+    (GUI): 
+        Environment Variables --> Edit the system environment variables --> Environment Variables --> User variables
+        --> Select Path --> Click Edit --> Click New, and add the file path of bat file in the custom directory 
+        (`C:\Tools\fuck.bat`) --> Hit OK on all windows
 
     (PowerShell):
+        $folderToAdd = "C:\Tools\thefuck"
+        $userPath = [Environment]::GetEnvironmentVariable("Path", "User")
+
+        if (-not ($userPath.Split(';') -contains $folderToAdd)) {
+            $newPath = "$userPath;$folderToAdd"
+            [Environment]::SetEnvironmentVariable("Path", $newPath, "User")
+            Write-Output "Added $folderToAdd to User PATH."
+        } else {
+            Write-Output "$folderToAdd is already in the User PATH."
+        }
 
 
 Restart CMD and try it out!
