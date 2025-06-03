@@ -35,6 +35,11 @@ if __name__ == '__main__':
 #### output_readers
 
 
+#### alias
+
+The alias is what defines and assigns values to TF_HISTORY, allowing thefuck to actually see the CLI history. For bash, this is done at: `thefuck/shells/bash.py` @ `line 16`
+-   Could be where the model gets it's input from
+
 #### next
 
 - run locally (not brew), add custom rules

@@ -16,7 +16,7 @@ from .fix_command import fix_command  # noqa: E402
 from ..utils import log
 
 def main():
-    log('whats up dev!')
+    log('New one')
 
     parser = Parser()
     known_args = parser.parse(sys.argv)
@@ -34,7 +34,8 @@ def main():
         print_alias(known_args)
 
     elif known_args.command or 'TF_HISTORY' in os.environ:
-        latest_history = os.environ['TF_HISTORY'].split('\n')[::-1]
+        # latest_history = os.environ['TF_HISTORY'].split('\n')[::-1]
+        latest_history = os.environ.get('TF_HISTORY', '').split('\n')[::-1]
         log(f"Command:TF_HISTORY: {known_args.command}:{latest_history}")
 
         fix_command(known_args)
