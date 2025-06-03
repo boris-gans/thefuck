@@ -2,6 +2,16 @@
 i need to differentiate between normal installs and dev installs. Unfortunatley I think the only way to get it working on CMD is by doing some annoying path work, so maybe i can create an extension of the .bat script to automate this.
 -   Also, have this fork also fix the import error with imp, should be quite simple
 
+**found an error on powershell**:
+pip install git+https://github.com/DL909/thefuck.git
+
+& "C:\Users\boris\open-source\thefuck\scripts\fuck.ps1
+
+stuck in an infinite loop:
+    adding fuck() function to current session
+
+    alias: This command cannot find a matching alias because an alias with the name 'fuck=eval  "$(TF_ALIAS=fuck PYTHONENCODING=utf-8 thefuck "$(fc -ln -1)")"' does not exist
+    At line:1 char:1
 
 
 ## Windows
