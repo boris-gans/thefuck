@@ -46,4 +46,18 @@ The alias is what defines and assigns values to TF_HISTORY, allowing thefuck to 
 
 - how do the up/down arrows work for selecting similar ones? similarity search?
 
+### Issues
+**Issue in conf.py; imp is no longer supported after python version 3.12**
+-   Command Prompt:
+-   PowerShell:
+-   Bash:
+
+**lack of clear installation guidelines for windows systems (command prompt and powershell)**
+-   Command prompt: done
+-   PowerShell:
+-   Bash: (neccecesary??)
+
+**
+
+
 

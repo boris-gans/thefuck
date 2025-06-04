@@ -22,7 +22,7 @@ If you've previosuly used pip to install thefuck, undo it:
 `pip uninstall thefuck`
 
 
-Install the maintained GitHub fork at *https://github.com/DL909/thefuck.git*
+Install the maintained GitHub fork at *https://github.com/boris-gans/thefuck.git*
 
 This fixes the import error with imp in the newer (>3.12) versions of python.
 `pip install git+https://github.com/DL909/thefuck.git`
