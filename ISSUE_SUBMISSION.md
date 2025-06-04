@@ -26,6 +26,11 @@ Title: Infinite loop when adding thefuck to system path on powershell using `fuc
 Version:
 Shell + Version:
 How to reproduce:
+-   pip install git+https://github.com/boris-gans/thefuck.git
+-   .\open-source\thefuck\scripts\fuck.ps1
+Output:
+
+
 Output of above (with debug set to true):
 Other:
 
