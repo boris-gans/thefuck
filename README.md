@@ -147,6 +147,11 @@ On other systems, install *The Fuck*  by using `pip`:
 ```bash
 pip install thefuck
 ```
+**Note: If on windows with python version >3.12, you should pip install this repository directly as the pypi refrences a removed package**
+```bash
+pip install git+https://github.com/boris-gans/thefuck.git
+```
+
 
 [Alternatively, you may use an OS package manager (OS X, Ubuntu, Arch).](https://github.com/nvbn/thefuck/wiki/Installation)
 

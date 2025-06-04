@@ -66,3 +66,17 @@ Restart CMD and try it out!
 `sl`
 `fuck`
 
+### PowerShell + Command Prompt
+
+If you've previosuly used pip to install thefuck, undo it:
+`pip uninstall thefuck`
+
+Install the github repository rather than the pypi package, this avoids the common import error thats a result of the `imp` package being removed after Python 3.12
+`pip install git+https://github.com/nvbn/thefuck.git`
+
+If this doesn't work there's two cases:
+1.  Python and/or pip are not in your system path
+2.  You did something wrong
+
+
+
