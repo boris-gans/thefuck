@@ -53,7 +53,7 @@ ModuleNotFoundError: No module named 'imp'
 ```
 
 **Other:**
-This issue has been reported numerous times (#1508, #1501, #1491, #1489, etc.). Although this is a very easy fix which people have already explained (notably @ierezell on issue #1489), I figured it was an oppurtunity to also improve the documentation and create an installation guide. I might be a bit dull but it took me a little while to figure this out.
+This issue has been reported numerous times (#1508, #1501, #1491, #1489, etc.). Although this is a very easy fix which people have already explained (notably @ierezell on issue #1489), I figured it was an oppurtunity to also improve the documentation and create an installation guide. I might be a bit dull but it took me a little while to figure this out, so I thought it'd be helpful for our windows friends.
 
 
 
