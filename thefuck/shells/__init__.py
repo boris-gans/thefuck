@@ -11,6 +11,9 @@ from .tcsh import Tcsh
 from .zsh import Zsh
 from .powershell import Powershell
 
+# dev
+from ..logs import debug
+
 shells = {'bash': Bash,
           'fish': Fish,
           'zsh': Zsh,
@@ -39,6 +42,7 @@ def _get_shell_from_proc():
         name = os.path.splitext(name)[0]
 
         if name in shells:
+            debug(f"Found shell: {name}")
             return shells[name]()
 
         try:
